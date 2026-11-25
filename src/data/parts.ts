@@ -1,0 +1,183 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { PartData, ZoneData } from '../types';
+
+export const ZONES: ZoneData[] = [
+  {
+    id: 'forehead',
+    name: 'Forehead',
+    desc: 'Bilateral frontal sweat duct clusters',
+    areaCm2: 28,
+    currentRatio: 0.52,
+  },
+  {
+    id: 'temples',
+    name: 'Temples',
+    desc: 'Temporal and hairline margin zones',
+    areaCm2: 14,
+    currentRatio: 0.28,
+  },
+  {
+    id: 'philtrum',
+    name: 'Upper Lip',
+    desc: 'Philtrum & perioral focal zone',
+    areaCm2: 8,
+    currentRatio: 0.20,
+  },
+];
+
+export const PARTS: PartData[] = [
+  {
+    id: 'forehead_pad',
+    n: 1,
+    title: 'Forehead Active Hydrogel Pad (L4)',
+    category: 'pad',
+    cost: '$2.50 per replacement set',
+    body: 'Medical-grade isotonic conductive hydrogel engineered specifically for thin facial skin. Replaces clumsy water trays with uniform ionic dispersion across the frontal forehead zone.',
+    specs: '0.9% NaCl saline equivalent, 28 cm² contact area, 1.2 mm thickness',
+    safetyNote: 'ISO 10993 cytotoxicity and skin irritation compliant. Zero chemical stinging.',
+    side: 'front',
+  },
+  {
+    id: 'temple_pads',
+    n: 2,
+    title: 'Dual Temple Contour Wings',
+    category: 'pad',
+    cost: '$2.00 per set',
+    body: 'Anatomically curved hydrogel pads positioned over the temporal crests to prevent facial sweat from rolling down into eyes and ears.',
+    specs: 'Dual 7 cm² ergonomic hydrogel pads, self-adhering magnetic snap backing',
+    safetyNote: 'Positioned anterior to superficial temporal artery to prevent pulsatile discomfort.',
+    side: 'side',
+  },
+  {
+    id: 'philtrum_pad',
+    n: 3,
+    title: 'Philtrum / Upper Lip Micro-Pad',
+    category: 'pad',
+    cost: '$1.50 per set',
+    body: 'Targeted perioral hydrogel pad treating hyperactive upper lip sweating without obstructing breathing or talking.',
+    specs: '8 cm² ultra-soft pad, flexible tether to main brow band',
+    safetyNote: 'Sub-milliamp distribution prevents dental tingling or metallic taste.',
+    side: 'front',
+  },
+  {
+    id: 'electrode_layer',
+    n: 4,
+    title: 'Zoned Silver (Ag/AgCl) Electrodes (L3)',
+    category: 'electrode',
+    cost: '$4.50',
+    body: 'Screen-printed silver/silver-chloride conductive serpentine traces on polyimide flex substrate with 4 magnetic snap studs.',
+    specs: '0.04 Ω/sq sheet resistance, 4 isolated current channels',
+    safetyNote: 'Zero copper or nickel toxicity; Ag/AgCl non-polarizable reversible electrochemistry.',
+    side: 'front',
+  },
+  {
+    id: 'barrier_layer',
+    n: 5,
+    title: 'TPU Waterproof Moisture Barrier (L2)',
+    category: 'chassis',
+    cost: '$1.20',
+    body: 'Hermetic polyurethane film separating the wet electrode pads from outer textile and user hair, ensuring 100% of current directs inward toward sweat glands.',
+    specs: '30 μm high-elasticity TPU, 10,000 mm H2O hydrostatic head',
+    safetyNote: 'Prevents external perspiration bridges and short circuits.',
+    side: 'front',
+  },
+  {
+    id: 'stretchable_traces',
+    n: 6,
+    title: 'Stretchable Silver Wiring Bus',
+    category: 'electrode',
+    cost: '$3.00',
+    body: 'Insulated multi-conductor silicone ribbon running along the side of the mask from the rear controller to the frontal electrode plates.',
+    specs: 'Silver-plated copper micro-strands, medical silicone jacket',
+    safetyNote: 'Double-insulated against facial skin contact.',
+    side: 'side',
+  },
+  {
+    id: 'chassis_mesh',
+    n: 7,
+    title: '3D Breathable Facial Mask Shell (L1)',
+    category: 'chassis',
+    cost: '$7.50',
+    body: 'Seamless 3D knit textile mask featuring orbital eye apertures, ergonomic nose bridge slope, and circumferential retention straps for uniform facial compression.',
+    specs: 'Antimicrobial CoolMax yarn, 18-22 mmHg distributed facial compression',
+    safetyNote: 'Ergonomic pressure distribution prevents tension headaches.',
+    side: 'front',
+  },
+  {
+    id: 'controller_box',
+    n: 8,
+    title: 'Rear Occipital Controller & OLED HUD',
+    category: 'electronics',
+    cost: '$18.00',
+    body: 'Ultra-lightweight rear-mounted module balancing headset weight on the occiput. Houses the dual-core microcontroller, OLED display, and constant-current buck-boost regulator.',
+    specs: '38 grams, magnetic 4-pin pogo dock, 128x32 OLED micro-display, 850mAh Li-Po',
+    safetyNote: 'Placed at rear of skull to keep high-frequency RF away from facial nerves.',
+    side: 'rear',
+  },
+  {
+    id: 'eye_safety_isolator',
+    n: 9,
+    title: '25mm Periorbital Eye-Safety Isolator Ring',
+    category: 'safety',
+    cost: '$1.80',
+    body: 'Non-conductive soft silicone standoff ring mechanically guaranteeing a minimum 25mm clearance buffer above the superior orbital margin of the eye sockets.',
+    specs: 'Shore 30A medical silicone, dielectric strength > 20 kV/mm',
+    safetyNote: 'Prevents any stray electric vector from intersecting the retina or optic nerve.',
+    side: 'front',
+  },
+];
+
+export const DEVICE_COMPARISON = [
+  {
+    feature: 'Treatment Target',
+    glove: 'Palmar (Sweaty palms)',
+    sock: 'Plantar (Sweaty soles & toes)',
+    visage: 'Craniofacial (Forehead, temples, face)',
+  },
+  {
+    feature: 'Contact Electrodes',
+    glove: '1 palm pad + 5 fingertip pads',
+    sock: '4 sole zones + 5 toe sleeves',
+    visage: '1 frontal band + 2 temple wings + 1 philtrum pad',
+  },
+  {
+    feature: 'Controller Placement',
+    glove: 'Wrist cuff',
+    sock: 'Ankle cuff',
+    visage: 'Rear occipital magnetic counterweight',
+  },
+  {
+    feature: 'Operating Current',
+    glove: '5 – 20 mA (DC)',
+    sock: '10 – 25 mA (DC)',
+    visage: '0.1 – 1.5 mA (Biphasic Microcurrent)',
+  },
+  {
+    feature: 'Maximum Voltage',
+    glove: 'Up to 60 V',
+    sock: 'Up to 80 V',
+    visage: 'Up to 18 V (Strict cranial ceiling)',
+  },
+  {
+    feature: 'Session Duration',
+    glove: '15 – 25 minutes',
+    sock: '20 – 30 minutes',
+    visage: '10 – 15 minutes (5-min polarity swap)',
+  },
+  {
+    feature: 'Skin Layer Thickness',
+    glove: 'Thick stratum corneum (~400 μm)',
+    sock: 'Very thick stratum corneum (~600 μm)',
+    visage: 'Ultra-thin stratum corneum (~15–20 μm)',
+  },
+  {
+    feature: 'Nerve Safety Protocol',
+    glove: 'Standard pain threshold check',
+    sock: 'Standard pain threshold check',
+    visage: 'Periorbital isolation + Trigeminal limit (<1.5 mA)',
+  },
+];

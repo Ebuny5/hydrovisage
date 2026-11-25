@@ -1,0 +1,6 @@
+{
+  "name": "HydroVisage — Craniofacial Iontophoresis Concept",
+  "description": "Interactive 3D concept of an ergonomic facial iontophoresis wearable for craniofacial hyperhidrosis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
